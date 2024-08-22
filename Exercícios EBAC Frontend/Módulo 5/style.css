@@ -1,0 +1,271 @@
+@import url("https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: "Roboto", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+/* Início do Header */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #ffd684;
+  padding: 1rem 11.5rem;
+
+  & .logo {
+    width: 9rem;
+    height: 9rem;
+
+    & img {
+      width: 100%;
+    }
+  }
+
+  & nav {
+    display: flex;
+    column-gap: 3rem;
+
+    & a {
+      text-transform: uppercase;
+      text-decoration: none;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #c01525;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      transition: all 0.4s;
+
+      &:hover {
+        background-color: #c01525;
+        color: #ffd684;
+      }
+    }
+  }
+}
+/* Fim do Header */
+
+/* Início do Main */
+main {
+  /* Início da seção Home */
+  & #home {
+    background-color: #f1ede7;
+    padding: 5rem 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    & .description {
+      width: 64rem;
+
+      & h1 {
+        font-size: 3.8rem;
+        font-family: "Merienda", cursive;
+        color: #c01525;
+        margin-bottom: 2rem;
+      }
+
+      & p {
+        font-size: 2.2rem;
+        color: #a04b00;
+        margin-bottom: 2rem;
+      }
+
+      & button {
+        padding: 1.8rem 3.6rem;
+        font-weight: 700;
+        background-color: #c01525;
+        color: #f1ede7;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: transform 0.4s;
+
+        &:hover {
+          transform: scale(0.9);
+        }
+      }
+    }
+
+    & .image {
+      width: 35rem;
+      height: 35rem;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 1px solid;
+
+      & img {
+        height: 100%;
+      }
+    }
+  }
+  /* Fim da seção Home */
+
+  /* Início da seção de Cardápio */
+  & #menu {
+    background-color: #ffd68473;
+    padding: 4rem 6rem;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 2rem;
+
+    & .pizza:nth-of-type(1) {
+      grid-column: 1 / 2;
+    }
+
+    & h2 {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #c01525;
+    }
+
+    & .pizza {
+      padding: 1rem;
+      border: 2px solid #c01525;
+      border-radius: 6px;
+      display: flex;
+
+      & div {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+
+        & h3 {
+          font-size: 1.6rem;
+          color: #c01525;
+        }
+
+        & p {
+          font-size: 1.4rem;
+          letter-spacing: 0.6px;
+          color: #3d1d00;
+        }
+
+        & button {
+          width: fit-content;
+          align-self: flex-end;
+          font-weight: 700;
+          background-color: #c01525;
+          color: #f1ede7;
+          border: none;
+          padding: 1rem;
+          border-radius: 6px;
+          cursor: pointer;
+          transition: transform 0.4s;
+
+          &:hover {
+            transform: scale(0.9);
+          }
+        }
+      }
+    }
+  }
+  /* Fim da seção de Cardápio */
+
+  /* Fim da seção container de Contato */
+  & #contact {
+    background-color: #f1ede7;
+    padding: 4rem 6rem;
+    display: grid;
+    grid-template-columns: 33.333% 33.333% 33.333%;
+    justify-content: center;
+
+    & h2 {
+      grid-column: 1 / 4;
+      color: #c01525;
+      font-size: 3rem;
+      margin-bottom: 2rem;
+    }
+
+    & h3 {
+      font-size: 2rem;
+      color: #c01525;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Início da seção de Contato */
+    & > div:nth-of-type(1) {
+      justify-self: self-start;
+
+      & div {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+
+        & a {
+          color: #a04b00;
+          font-size: 1.6rem;
+
+          & .bi {
+            margin-right: 1rem;
+          }
+        }
+      }
+    }
+    /* Fim da seção de Contato */
+
+    /* Início da seção de Promoção */
+    & > div:nth-of-type(2) {
+      justify-self: center;
+
+      & form {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+
+        & input {
+          padding: 1rem;
+          font-size: 1.6rem;
+          width: 30rem;
+        }
+
+        & button {
+          padding: 1rem;
+          font-size: 1.6rem;
+          font-weight: 700;
+          width: 30rem;
+          border: none;
+          border-radius: 6px;
+          background-color: #ffd684;
+          color: #c01525;
+          cursor: pointer;
+          transition: transform 0.4s;
+
+          &:hover {
+            transform: scale(0.9);
+          }
+        }
+      }
+    }
+    /* Fim da seção de Promoção */
+
+    /* Início da seção de localização */
+    & > div:nth-of-type(3) {
+      justify-self: self-end;
+
+      & address {
+        font-size: 1.6rem;
+      }
+    }
+  }
+  /* Fim da seção de localização */
+}
+/* Fim do Main */
+
+/* Início do Footer */
+footer {
+  padding: 2rem 0;
+  text-align: center;
+  background-color: #ffd684;
+  color: #c01525;
+  font-size: 1.6rem;
+}
+/* Fim do Footer */

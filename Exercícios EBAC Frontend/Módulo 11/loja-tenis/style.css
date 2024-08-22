@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/* Regras Gerais */
+body {
+  header {
+    position: sticky;
+    top: 0;
+    background-color: #3868d6;
+    padding: 1rem 12%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    a {
+      color: #fff;
+      font-size: 2rem;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    nav {
+      a {
+        margin-left: 2rem;
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  main {
+    padding: 4rem 12%;
+    background-color: #ddd;
+
+    h2 {
+      color: #3868d6;
+      padding-bottom: 0.5rem;
+      margin-bottom: 2rem;
+      border-bottom: 2px solid #3868d6;
+    }
+
+    #about {
+      display: flex;
+      justify-content: space-between;
+      column-gap: 3rem;
+      margin-bottom: 4rem;
+
+      .image {
+        width: 30rem;
+        height: 30rem;
+
+        img {
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .description {
+        width: 55%;
+
+        p {
+          font-size: 1.2rem;
+          font-weight: 500;
+          margin-bottom: 0.5rem;
+        }
+      }
+    }
+
+    #products {
+      .products {
+        display: flex;
+        justify-content: space-between;
+        gap: 4rem 1rem;
+
+        .product {
+          display: flex;
+          flex-direction: column;
+          width: 18rem;
+
+          .product-image {
+            width: 100%;
+            height: 18rem;
+
+            img {
+              object-fit: cover;
+              width: 100%;
+              height: 100%;
+            }
+          }
+
+          h3 {
+            margin: 2rem 0 1rem 0;
+            font-size: 1.4rem;
+          }
+
+          p {
+            font-size: 1.2rem;
+          }
+
+          button {
+            background-color: #3868d6;
+            color: #fff;
+            font-size: 1rem;
+            border: none;
+            padding: 1rem 0;
+            width: 100%;
+            margin-top: 1rem;
+            cursor: pointer;
+            transition: transform 0.4s;
+
+            &:hover {
+              transform: scale(0.95);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    background-color: #3868d6;
+    color: #fff;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+  }
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 1025px) {
+  body main #about {
+    flex-direction: column;
+
+    .image {
+      width: 100%;
+      height: 35rem;
+      margin-bottom: 2rem;
+    }
+
+    .description {
+      width: 100%;
+    }
+  }
+
+  body main #products .products {
+    flex-wrap: wrap;
+
+    .product {
+      width: calc(50% - 2rem);
+
+      .product-image {
+        height: 30rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 641px) {
+  body main #products .products {
+    display: block;
+
+    .product {
+      width: 100%;
+      margin-bottom: 4rem;
+    }
+  }
+}
+
+@media screen and (max-width: 426px) {
+  body header a {
+    font-size: 1.6rem;
+  }
+
+  body header nav a {
+    font-size: 0.8rem;
+  }
+
+  body main #about .image {
+    margin-bottom: -2rem;
+
+    img {
+      height: 30rem;
+    }
+  }
+}
+
+@media screen and (max-width: 321px) {
+  body header a {
+    font-size: 1.4rem;
+  }
+
+  body main #about .image {
+    margin-bottom: -12rem;
+
+    img {
+      height: 20rem;
+    }
+  }
+}

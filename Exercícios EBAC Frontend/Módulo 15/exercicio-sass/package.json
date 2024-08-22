@@ -1,0 +1,11 @@
+{
+  "name": "exercicio",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./src/styles.scss:./build/styles.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

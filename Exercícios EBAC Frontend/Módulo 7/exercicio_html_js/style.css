@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+form {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 10px;
+
+  & input {
+    width: 300px;
+    padding: 10px;
+    border-radius: 6px;
+  }
+
+  #mensagem {
+    padding: 10px;
+    border-radius: 6px;
+    color: #fff;
+    width: 300px;
+    font-size: 16px;
+    text-align: center;
+
+    &.erro {
+      background-color: #ff0000b5;
+    }
+
+    &.positivo {
+      background-color: #00ff00b5;
+      color: #000;
+    }
+  }
+
+  & button {
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: none;
+    background-color: #00ff00b5;
+    font-weight: 600;
+    cursor: pointer;
+  }
+}

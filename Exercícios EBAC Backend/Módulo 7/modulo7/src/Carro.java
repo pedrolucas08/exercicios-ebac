@@ -1,3 +1,7 @@
+
+/**
+ * @author Pedro Lucas Moreira Silva
+ */
 public class Carro {
 
   private String marca;
@@ -42,6 +46,7 @@ public class Carro {
     return this.velocidade;
   }
 
+  // Método para acelerar o carro
   public void acelerar(int velocidadeDesejada) {
     for (int i = 2; this.velocidade <= velocidadeDesejada; i = 2) {
       if (velocidadeDesejada - this.velocidade == 1) {
@@ -55,6 +60,7 @@ public class Carro {
     }
   }
 
+  // Método para parar o carro
   public void parar() {
     for (int i = 10; i <= this.velocidade; i = 10) {
       this.velocidade -= i;
@@ -64,4 +70,5 @@ public class Carro {
       }
     }
   }
+
 }
